@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Graphics Company</title>
+
+    <!--LINKED STYLESHEET-->
+    <link rel="stylesheet" href="styles.css">
+
+    <!--FONTAWESOME ICONS-->
+    <script src="https://kit.fontawesome.com/4a00a82b9f.js" crossorigin="anonymous"></script>
+
+    <!--GOOGLE FONTS-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <main id="main" class="main" aria-labelledby="main">
+        <header id="header" class="header" aria-label="header">
+            <h2><a href="#about" class="logo">Agency</a></h2>
+            <input type="checkbox" id="menu-btn" class="menu-btn">
+            <label for="menu-btn" class="menu-icon"><i class="fa-solid fa-bars"></i></label>
+            <ul class="menu" id="menu" aria-label="mobile-nav">   
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#branding">Branding</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul> 
+            <!--END OF MOBILE VERSION NAV-->
+            <nav class="desktop-nav" aria-label="navigation">
+                <ul>   
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#branding">Branding</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+            <!--END OF DESKTOP VERSION NAV-->
+        </header>
+        <!---END OF HEADER & NAV--> 
+        <section id="about" class="about-grid" aria-label="about section">
+            <div class="container">
+                <article class="left">
+                    <h1>We provide custom graphics</h1>
+                    <p>Our employees pride themselves in providing world class designs.</p>
+                    <p><a href="#products" class="btn">Learn More <i class="fa-solid fa-angle-right"></i></a></p>  
+                </article>
+                <aside class="right">
+                    <img src="./imgs/orange.jpeg" alt="people working">
+                </aside>
+            </div>
+        </section>
+        <!--END OF ABOUT SECTION-->
+        <section id="services" class="services-grid" aria-label="services section">
+            <h2>Services</h2>
+            <div class="container">
+                <article class="service-column">
+                    <i class="fa-solid fa-pen fa-xl"></i>
+                    <h3 class="service-title">Photoshop</h3>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                        Dicta incidunt, asperiores error officia vel deserunt!
+                    </p>
+                </article>
+                <article class="service-column">
+                    <i class="fa-solid fa-chart-pie fa-xl"></i>
+                    <h3 class="service-title">Infographic</h3>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                        Dicta incidunt, asperiores error officia vel deserunt! 
+                    </p>
+                </article>
+                <article class="service-column"> 
+                    <i class="fa-solid fa-cube fa-xl"></i>                 
+                    <h3 class="service-title">3D Design</h3>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                        Dicta incidunt, asperiores error officia vel deserunt!
+                    </p>
+                </article>
+            </div>
+        </section>
+        <!--END OF SERVICES SECTION-->
+        <section id="branding" class="branding-grid" aria-label="branding section">
+            <h2>Branding</h2>
+            <div class="container">
+                <article class="branding-column">
+                    <div class="branding-image">
+                       <img src="./imgs/alice-donovan-rouse-yu68fUQDvOI-unsplash.jpg" type="image/jpg" alt="unsplash">
+                    </div> 
+                        <h3>Alice</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis, ducimus.
+                        </p> 
+                        <a href="https://unsplash.com/photos/yu68fUQDvOI" class="btn">Learn more <i class="fa-solid fa-angle-right"></i></a>
+                </article>
+                <article class="branding-column">
+                    <div class="branding-image">
+                       <img src="./imgs/john-jennings-fg7J6NnebBc-unsplash.jpg" type="image" alt="unsplash">
+                    </div> 
+                    <h3>John</h3>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eligendi, laudantium?
+                    </p> 
+                    <a href="https://unsplash.com/photos/fg7J6NnebBc" class="btn">Learn more <i class="fa-solid fa-angle-right"></i></a>
+                </article>
+                <article class="branding-column">
+                    <div class="branding-image">
+                       <img src="./imgs/hal-gatewood-tZc3vjPCk-Q-unsplash.jpg" type="image" alt="unsplash">
+                    </div> 
+                    <h3>Hal</h3>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Accusamus, earum?
+                    </p> 
+                    <a href="https://unsplash.com/photos/tZc3vjPCk-Q" class="btn">Learn more <i class="fa-solid fa-angle-right"></i></a>
+                </article>
+            </div>
+        </section>  
+        <!--END OF BRANDING SECTION--> 
+        <section id="contact" class="contact" aria-label="contact section">
+            <h2>Contact</h2>
+            <div class="container">
+                <form action="contact-form">
+                    <fieldset>
+                        <legend>
+                            <label id="name">Name <input id="name" type="text" required></label>
+                            <label id="email">Email <input id="email" type="email" required></label>
+                        </legend>
+                    </fieldset>
+                    <fieldset>
+                        <legend>
+                            <label for="message">Message
+                            <textarea name="message" id="message" cols="30" rows="10"></textarea>
+                        </label> 
+                        </legend>
+                    </fieldset>
+                    <input type="submit" id="submit" value="Send Message" aria-label="send message">
+                </form>
+                <!--END OF FORM SECTION-->
+                <aside aria-label="aside">
+                    <h3>Contact information</h3>
+                    <p>how can we help?</p>
+                    <div class="info">
+                        <article aria-label="article">
+                            <i class="fa-solid fa-envelope fa-1x"></i>
+                            <div class="details">
+                                <h4>Email</h4>
+                                <p>info@xyz.com</p>
+                            </div>
+                        </article>
+                        <article aria-label="article">
+                            <i class="fa-solid fa-location-dot fa-1x"></i>
+                            <div class="details">
+                                <h4>Location</h4>
+                                <p>123 Lucky Street</p>
+                                <p>North, London</p>
+                            </div>
+                        </article>
+                        <article aria-label="article">
+                            <i class="fa-solid fa-phone fa-1x"></i>
+                            <div class="details">
+                                <h4>Telephone</h4>
+                                <p>Weekdays 8am-5pm</p>
+                                <p>(404) 000-0001</p>
+                            </div>
+                        </article> 
+                    </div>
+                </aside>                    
+            </div>
+            <!--END OF ASIDE INFORMATION-->
+        </section>
+        <!--END OF CONTACT SECTION-->
+        <footer id="footer" aria-label="footer">
+            <section id="footer-main">
+                <div class="footer-column">
+                    <h3 class="footer-title">Company</h3>
+                    <ul>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">Investors</a></li>
+                        <li><a href="#">Accesability</a></li>
+                        <li><a href="#">Company News</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3 class="footer-title">Resources</h3>
+                    <ul>
+                       <li><a href="#">Docs</a></li>
+                       <li><a href="#">Blog</a></li>
+                       <li><a href="#">Downloads</a></li>
+                       <li><a href="#">Release Notes</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3 class="footer-title">Help Desk</h3>
+                    <ul>
+                        <li><a href="#">Email</a></li>
+                        <li><a href="#">Sales</a></li>
+                        <li><a href="#">Advertise</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3 class="footer-title">Stay Informed</h3>
+                    <p>Subscribe to our mailing list.</p>
+                    <form action="newsletter" aria-label="signup">
+                        <input id="email" type="email" name="email" placeholder="Enter your email" 
+                        required aria-label="enter your email">
+                        <input type="submit" value="Subscribe">
+                    </form>
+                </div>
+            </section>
+            <!--SOCIAL MEDIA-->
+            <section id="footer-socials" aria-label="social media">
+                <ul class="footer-icons">
+                    <li><a href="#" aria-label="facebook"><i class="fa-brands fa-facebook fa-lg"></i></a></li>
+                    <li><a href="#" aria-label="twitter"><i class="fa-brands fa-twitter fa-lg"></i></a></li>
+                    <li><a href="#" aria-label="instagram"><i class="fa-brands fa-instagram fa-lg"></i></a></li>
+                    <li><a href="#" aria-label="github"><i class="fa-brands fa-github fa-lg"></i></a></li>
+                    <li><a href="#" aria-label="linkedin"><i class="fa-brands fa-linkedin fa-lg"></i></a></li>
+                    <li><a href="#" aria-label="youtube"><i class="fa-brands fa-youtube fa-lg"></i></a></li>
+                </ul>
+            </section>
+            <!--LEGAL NOTICE-->
+            <section id="footer-legal" aria-label="legal">
+                <small>
+                    <ul class="footer-legal-items">
+                       <li><a href="#">Terms &amp; Conditions</a></li>
+                       <li><a href="#">Privacy Policy</a></li>
+                       <li>&copy; Copyright 2022 xyz</li>
+                    </ul>
+                </small>
+            </section>
+        </footer> 
+        <!--END OF FOOTER SECTION-->
+    </main>
+</body>
+</html>
