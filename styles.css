@@ -4,8 +4,7 @@
     --color-tertiary: #D1B997;
     --color-alternate: #654738;
     --color-white:#fff;
-    --transition: all 0.3s ease;
-    --transition-nav-menu: all 0.2s ease-out;
+    --transition: 0.3s ease;
 }
 
 
@@ -25,7 +24,7 @@ body {
     font-family: 'Montserrat', sans-serif;
     background-color: var(--color-tertiary);
     min-height: 100vh;
-    width: 100%;
+    min-width: 100%;
     line-height: 2;
 }
 
@@ -47,7 +46,7 @@ p {
     color: var(--color-primary);
 }
 section {
-    padding-top: 14rem;
+    padding: 6rem 0;
      
 }
 
@@ -79,39 +78,24 @@ img {
 
 header[class="header"] {
     position: fixed;
-    width: 100%;
-    background-color: var(--color-secondary);  
+    top: 0;
+    left: 0;
+    min-width: 100%;
+    background-color: var(--color-secondary);
+    padding: 1rem;
+}
+header[id="header"] .container {
     display: flex;
     justify-content: space-between;
-    align-items: center; 
-    padding: 1rem;  
+    align-items: center;
 }
 
-.header .menu {
-    max-height: 0;
-    transition: var(--transition-nav-menu);
-    display: none;
+nav[id="navigation"] .nav-menu {
+    display: flex;
+    align-items: center;
+    gap: 4rem;
 }
-
-.menu-btn {
-    opacity: 0;
-    
-}
-
-.header .menu-icon {
-    cursor: pointer;
-}
-
-.header .menu-btn:checked ~ .menu {
-    position: absolute;
-    max-height: 240px;
-    top: 100%;
-    left: 0;
-    display: block;
-    padding: 1rem;
-    transition: var(--transition-nav-menu);
-}
-
+ 
 /* END OF HEADER & NAV STYLING */
 
 section[class="about-grid"] .container{
@@ -140,7 +124,7 @@ article[class="service-column"]{
 }
 
 article[class="service-column"] .fa-chart-pie {
-    color: var(--color-white);
+    color: var(--color-alternate);
 }
 
 /* END OF SERVICES STYLING */
@@ -234,9 +218,45 @@ section[class="contact"] article {
 /* END OF CONTACT SECTION */
 
 /* ==== MEDIA QUERIES FOR SMALL SCREENS ==== */
-@media only screen and (max-width: 810px) {
+@media only screen and (max-width: 1024px) {
+    header[class="header"] {
+        position: fixed;
+        width: 100%;
+        background-color: var(--color-secondary);  
+        display: flex;
+        justify-content: space-between;
+        align-items: center; 
+        padding: 1rem;
+    }
     
-    nav[class="desktop-nav"] ul {
+    .buttons {
+        display: flex;
+    }
+    
+    #open-sidebar {
+        border: none;
+        display: inline-block;
+        background-color: transparent;
+        color: var(--color-primary);
+        cursor: pointer;
+    } 
+    bento-sidebar[id="sidebar1"] {
+        cursor: pointer;
+    }
+
+    bento-sidebar[id="sidebar1"] li {
+        padding: 2rem;
+    }
+
+    bento-sidebar[id="sidebar1"] a {
+        color: var(--color-primary);
+    }
+   
+    bento-sidebar[id="sidebar1"] a:hover {
+        color: var(--color-secondary);
+    }
+
+    nav[id="navigation"] .nav-menu {
         display: none;
     }
     
@@ -245,67 +265,31 @@ section[class="contact"] article {
     }
 
     section[class="services-grid"] .container {
-        grid-template-columns: 1fr;
+        grid-template-columns:  minmax(min-content, 1fr);
     }
 
     section[class="branding-grid"] .container {
-        grid-template-columns: 1fr;
+        grid-template-columns:  minmax(min-content, 1fr);
     }
 
     section[class="contact"] .container {
-        grid-template-columns: 1fr;
+        grid-template-columns:  minmax(min-content, 1fr);
     }
     
     
 }
 /*  END OF MEDIA QUERIES FOR SMALL SCREENS */
 
-/*==== MEDIA QUERIES FOR IPAD & LARGER ==== */
+/*==== MEDIA QUERIES FOR LARGE SCREENS==== */
 
-@media screen and (min-width: 810px){
+@media screen and (min-width: 1024px){
     
-    input[type="checkbox"]{
+    #sidebar1, #open-sidebar {
         display: none;
     }
-    
-    header[class="header"] ul a:hover {
-        background-color: var(--color-secondary);
-    }
-
-    header[class="header"] {
-        padding: 1rem;
-    }
-
-    nav[class="desktop-nav"] ul {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        gap: 2rem;   
-    } 
-         
-    nav[class="desktop-nav"] a {
-        color: var(--color-primary);
-    }
-
-    nav[class="desktop-nav"] a:hover {
-        color: var(--color-white);
-    }
-
-    header[class="header"] .menu-icon {
-        display: none;
-
-    }
-
-    .header .menu-btn:checked ~ .menu {
-        display: none;
-    }
-
-    section {
-        padding: 6rem;
-    }
-    
+       
 }
-/* END OF MEDIA QUERIES FOR IPAD & LARGER */
+/* END OF MEDIA QUERIES FOR LARGE SCREENS */
 
 /* FOOTER STYLING */
 footer[id="footer"] {
