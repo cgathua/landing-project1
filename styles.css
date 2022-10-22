@@ -21,10 +21,10 @@ html {
 }
 
 body {
-    font-family: 'Montserrat', sans-serif;
+    font-family: Arial, Helvetica, sans-serif,sans-serif;
     background-color: var(--color-tertiary);
-    min-height: 100vh;
-    min-width: 100%;
+    height: 100vh;
+    width: 100%;
     line-height: 2;
 }
 
@@ -113,7 +113,8 @@ section[class="about-grid"] p {
 
 section[class="services-grid"] .container{
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: minmax(min-content, 1fr)
+    minmax(min-content, 1fr)  minmax(min-content, 1fr);
     gap: 1rem;
 }
 
@@ -131,7 +132,8 @@ article[class="service-column"] .fa-chart-pie {
 
 section[class="branding-grid"] .container {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: minmax(min-content, 1fr)
+    minmax(min-content, 1fr) minmax(min-content, 1fr);
     gap: 1rem;  
 }
 
@@ -218,7 +220,7 @@ section[class="contact"] article {
 /* END OF CONTACT SECTION */
 
 /* ==== MEDIA QUERIES FOR SMALL SCREENS ==== */
-@media only screen and (max-width: 1024px) {
+@media screen and (max-width: 1024px) {
     header[class="header"] {
         position: fixed;
         width: 100%;
@@ -229,13 +231,9 @@ section[class="contact"] article {
         padding: 1rem;
     }
     
-    .buttons {
-        display: flex;
-    }
     
     #open-sidebar {
         border: none;
-        display: inline-block;
         background-color: transparent;
         color: var(--color-primary);
         cursor: pointer;
@@ -256,6 +254,12 @@ section[class="contact"] article {
         color: var(--color-secondary);
     }
 
+    #close-sidebar {
+        border: none;
+        background-color: transparent;
+        color: var(--color-primary);
+        cursor: pointer;
+    }
     nav[id="navigation"] .nav-menu {
         display: none;
     }
