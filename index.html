@@ -5,19 +5,25 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Graphics Company</title>
+    <meta name="title" content="Graphics Company">
+    <meta name="description" content="This is a landing page for a Graphics Company, made by cgathua">
 
     <!--LINKED STYLESHEET-->
     <link rel="stylesheet" href="styles.css">
+    <!--GOOGLE FONTS-->
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400&display=swap');
+    </style>
 
     <!--FONTAWESOME ICONS-->
-    <script src="https://kit.fontawesome.com/4a00a82b9f.js" crossorigin="anonymous"></script>
+    <script defer src="https://kit.fontawesome.com/4a00a82b9f.js" crossorigin="anonymous"></script>
 
     <!--BENTO MENU SLIDER-->
-    <script type="module" src="https://cdn.ampproject.org/bento.mjs" crossorigin="anonymous"></script>
-    <script nomodule src="https://cdn.ampproject.org/bento.js" crossorigin="anonymous"></script>
-    <script type="module" src="https://cdn.ampproject.org/v0/bento-sidebar-1.0.mjs" crossorigin="anonymous"></script>
-    <script nomodule src="https://cdn.ampproject.org/v0/bento-sidebar-1.0.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="https://cdn.ampproject.org/v0/bento-sidebar-1.0.css" crossorigin="anonymous" defer>
+    <script defer type="module" src="https://cdn.ampproject.org/bento.mjs" crossorigin="anonymous"></script>
+    <script defer nomodule src="https://cdn.ampproject.org/bento.js" crossorigin="anonymous"></script>
+    <script defer type="module" src="https://cdn.ampproject.org/v0/bento-sidebar-1.0.mjs" crossorigin="anonymous"></script>
+    <script defer nomodule src="https://cdn.ampproject.org/v0/bento-sidebar-1.0.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.ampproject.org/v0/bento-sidebar-1.0.css" crossorigin="anonymous">
 </head>
 <!--END OF HEAD-->
 <body>
@@ -53,13 +59,16 @@
         <!--END OF HEADER-->
         <section id="about" class="about-grid" aria-label="about section">
             <div class="container">
-                <article class="left">
+                <article>
                     <h1>We provide custom graphics</h1>
                     <p>Our employees pride themselves in providing world class designs.</p>
                     <p><a href="#products" class="btn">Learn More <i class="fa-solid fa-angle-right"></i></a></p>  
                 </article>
-                <aside class="right">
-                    <img src="./imgs/canvasrc.jpg" width="1080" height="1080" alt="people working">
+                <aside>
+                    <picture>
+                        <source srcset="./imgs/canvasrc.avif" type="image/avif">
+                        <img src="./imgs/canvasrc.jpg" width="1080" height="1080" alt="people working">
+                    </picture>
                 </aside>
             </div>
         </section>
@@ -98,27 +107,29 @@
             <h2>Branding</h2>
             <div class="container">
                 <article class="branding-column">
-                    <div class="branding-image">
-                       <img src="./imgs/alice-donovan-rouse-yu68fUQDvOI-unsplash.jpg" width="640" height="427" type="image/jpg" alt=" alice unsplash" loading="lazy">
-                    </div> 
-                        <h3>Alice</h3>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis, ducimus.
-                        </p> 
-                        <p aria-label="link to Alice"><a href="https://unsplash.com/photos/yu68fUQDvOI" class="btn"> Artist <i class="fa-solid fa-angle-right"></i></a></p>
+                    <picture class="branding-image">
+                        <source srcset="./imgs/alice-donovan-rouse-yu68fUQDvOI-unsplash.avif" type="image/avif">
+                        <img src="./imgs/alice-donovan-rouse-yu68fUQDvOI-unsplash.jpg" width="640" height="427" type="image/jpg" alt=" alice unsplash" loading="lazy">
+                    </picture> 
+                    <h3>Alice</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis, ducimus.</p> 
+                    <p aria-label="link to Alice"><a href="https://unsplash.com/photos/yu68fUQDvOI" class="btn"> Artist <i class="fa-solid fa-angle-right"></i></a></p>
                 </article>
                 <article class="branding-column">
-                    <div class="branding-image">
-                       <img src="./imgs/john-jennings-fg7J6NnebBc-unsplash.jpg" width="640" height="427" type="image" alt=" john unsplash" loading="lazy">
-                    </div> 
+                    <picture class="branding-image">
+                        <source srcset="./imgs/john-jennings-fg7J6NnebBc-unsplash.avif" type="image/avif">
+                        <img src="./imgs/john-jennings-fg7J6NnebBc-unsplash.jpg" width="640" height="427" type="image" alt=" john unsplash" loading="lazy">
+                    </picture> 
                     <h3>John</h3>
                     <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eligendi, laudantium?
                     </p> 
                     <p aria-label="link to John"><a href="https://unsplash.com/photos/fg7J6NnebBc" class="btn">Artist <i class="fa-solid fa-angle-right"></i></a></p>
                 </article>
                 <article class="branding-column">
-                    <div class="branding-image">
-                       <img src="./imgs/hal-gatewood-tZc3vjPCk-Q-unsplash.jpg" width="640" height="427" type="image" alt=" hal unsplash" loading="lazy">
-                    </div> 
+                    <picture class="branding-image">
+                        <source srcset="./imgs/hal-gatewood-tZc3vjPCk-Q-unsplash.avif" type="image/avif">
+                        <img src="./imgs/hal-gatewood-tZc3vjPCk-Q-unsplash.jpg" width="640" height="427" type="image" alt=" hal unsplash" loading="lazy">
+                    </picture> 
                     <h3>Hal</h3>
                     <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Accusamus, earum?
                     </p> 
